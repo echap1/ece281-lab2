@@ -92,7 +92,7 @@ begin
         sw <= x"6"; wait for 20 ns; assert seg = "0000010" report "bad 6" severity failure;
         sw <= x"7"; wait for 20 ns; assert seg = "1111000" report "bad 7" severity failure;
         sw <= x"8"; wait for 20 ns; assert seg = "0000000" report "bad 8" severity failure;
-        sw <= x"9"; wait for 20 ns; assert seg = "0010000" report "bad 9" severity failure;
+        sw <= x"9"; wait for 20 ns; assert seg = "0011000" report "bad 9" severity failure;
         sw <= x"A"; wait for 20 ns; assert seg = "0001000" report "bad A" severity failure;
         sw <= x"B"; wait for 20 ns; assert seg = "0000011" report "bad B" severity failure;
         sw <= x"C"; wait for 20 ns; assert seg = "0100111" report "bad C" severity failure;
