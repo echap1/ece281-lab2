@@ -43,9 +43,9 @@ signal D0, D1, D2, D3, Sa, Sb, Sc, Sd, Se, Sf, Sg: std_logic := '0';
 begin
 
 D0 <= i_D(0);
-D0 <= i_D(1);
-D0 <= i_D(2);
-D0 <= i_D(3);
+D1 <= i_D(1);
+D2 <= i_D(2);
+D3 <= i_D(3);
 
 Sa <= ((not D0 and not D1 and D2)
     or (not D1 and D2 and D3)
