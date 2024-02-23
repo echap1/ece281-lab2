@@ -47,23 +47,23 @@ D1 <= i_D(1);
 D2 <= i_D(2);
 D3 <= i_D(3);
 
-Sa <= ((not D0 and not D1 and D2)
+o_S(0) <= ((not D0 and not D1 and D2)
     or (not D1 and D2 and D3)
     or (D0 and not D1 and not D2 and not D3)
     or (D0 and D1 and not D2 and D3));
     
-Sb <= ((D0 and D1 and D3)
+o_S(1) <= ((D0 and D1 and D3)
     or (not D0 and D1 and D2)
     or (D0 and not D1 and D2 and not D3)
     or (not D0 and D2 and D3));
     
-Sc <= '1' when (
+o_S(2) <= '1' when (
     (i_D = x"2") or
     (i_D = x"C") or
     (i_D = x"E") or
     (i_D = x"F") ) else '0';
         
-Sd <= '1' when (
+o_S(3) <= '1' when (
     (i_D = x"1") or
     (i_D = x"4") or
     (i_D = x"7") or
@@ -71,7 +71,7 @@ Sd <= '1' when (
     (i_D = x"A") or
     (i_D = x"F") ) else '0';
             
-Se <= '1' when (
+o_S(4) <= '1' when (
     (i_D = x"1") or
     (i_D = x"3") or
     (i_D = x"4") or
@@ -79,7 +79,7 @@ Se <= '1' when (
     (i_D = x"7") or
     (i_D = x"9") ) else '0';
                 
-Sf <= '1' when (
+o_S(5) <= '1' when (
     (i_D = x"1") or
     (i_D = x"2") or
     (i_D = x"3") or
@@ -87,17 +87,17 @@ Sf <= '1' when (
     (i_D = x"C") or
     (i_D = x"D") ) else '0';
                     
-Sg <= '1' when (
+o_S(6) <= '1' when (
     (i_D = x"0") or
     (i_D = x"1") or
     (i_D = x"7") ) else '0';
 
-o_S(0) <= Sa;
-o_S(1) <= Sb;
-o_S(2) <= Sc;
-o_S(3) <= Sd;
-o_S(4) <= Se;
-o_S(5) <= Sf;
-o_S(6) <= Sg;
+--o_S(0) <= Sa;
+--o_S(1) <= Sb;
+--o_S(2) <= Sc;
+--o_S(3) <= Sd;
+--o_S(4) <= Se;
+--o_S(5) <= Sf;
+--o_S(6) <= Sg;
 
 end sevenSegDecoder_arch;
